@@ -1,0 +1,12 @@
+{
+  "name": "my-nodejs-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js app for AWS CI/CD",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

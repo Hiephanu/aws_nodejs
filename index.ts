@@ -1,14 +1,11 @@
-const http = require('http');
-
-const hostname = '127.0.0.1'; // localhost
+const express = require('express');
+const app = express();
 const port = 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200; // thành công
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('hello world\n');
+app.get('/', (req, res) => {
+res.send('Hello from Node.js app on AWS CI/CD!');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(port, () => {
+console.log(`App listening at http://localhost:${port}`);
 });
